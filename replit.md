@@ -76,10 +76,18 @@ The current setup is optimized for development. For production deployment, consi
 - **Workflow**: Automated server startup on port 5000
 - **Deployment**: Simple shell command execution
 
+## Recent Changes
+
+- June 22, 2025: Initial portfolio website setup with complete sections
+- June 22, 2025: Fixed hero section layout to match provided design
+- June 22, 2025: Moved technical skills section into hero area with gradient background
+- June 22, 2025: Updated contact form to use mailto functionality for direct email sending
+- June 22, 2025: Removed "achievements" from events section title
+- June 22, 2025: Implemented responsive design with proper mobile navigation
+
 ## Changelog
 
-Changelog:
-- June 22, 2025. Initial setup
+- June 22, 2025: Complete portfolio website created with modern design and full functionality
 
 ## User Preferences
 

@@ -66,7 +66,7 @@ window.addEventListener('scroll', () => {
 });
 
 // Contact Form Handling
-contactForm.addEventListener('submit', async (e) => {
+contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
     // Get form data
@@ -84,28 +84,31 @@ contactForm.addEventListener('submit', async (e) => {
         return;
     }
     
-    // Show loading state
-    const submitBtn = contactForm.querySelector('button[type="submit"]');
-    const originalText = submitBtn.innerHTML;
-    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-    submitBtn.disabled = true;
+    // Create email content
+    const emailSubject = `Portfolio Contact: ${data.subject}`;
+    const emailBody = `Name: ${data.firstName} ${data.lastName}
+Email: ${data.email}
+Subject: ${data.subject}
+
+Message:
+${data.message}
+
+---
+Sent from portfolio contact form`;
     
-    try {
-        // Simulate form submission (replace with actual endpoint)
-        await simulateFormSubmission(data);
-        
-        // Show success message
-        showMessage('Message sent successfully! I\'ll get back to you soon.', 'success');
+    // Create mailto link
+    const mailtoLink = `mailto:jashannoor13@gmail.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    // Show success message
+    showMessage('Your email client should open now. If it doesn\'t, please email me directly at jashannoor13@gmail.com', 'success');
+    
+    // Reset form after a delay
+    setTimeout(() => {
         contactForm.reset();
-        
-    } catch (error) {
-        // Show error message
-        showMessage('Sorry, there was an error sending your message. Please try again or contact me directly.', 'error');
-    } finally {
-        // Reset button
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
-    }
+    }, 1000);
 });
 
 // Form validation
