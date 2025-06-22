@@ -426,11 +426,86 @@ function safeQuerySelector(selector) {
     return element;
 }
 
+// Portfolio Carousel
+class PortfolioCarousel {
+    constructor() {
+        this.track = document.getElementById('carouselTrack');
+        this.prevBtn = document.getElementById('prevBtn');
+        this.nextBtn = document.getElementById('nextBtn');
+        this.indicators = document.querySelectorAll('.indicator');
+        this.currentSlide = 0;
+        this.totalSlides = document.querySelectorAll('.project-card').length;
+        
+        this.init();
+    }
+    
+    init() {
+        if (!this.track) return;
+        
+        this.prevBtn.addEventListener('click', () => this.prevSlide());
+        this.nextBtn.addEventListener('click', () => this.nextSlide());
+        
+        this.indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => this.goToSlide(index));
+        });
+        
+        // Auto-slide every 5 seconds
+        this.autoSlide = setInterval(() => this.nextSlide(), 5000);
+        
+        // Pause auto-slide on hover
+        this.track.addEventListener('mouseenter', () => clearInterval(this.autoSlide));
+        this.track.addEventListener('mouseleave', () => {
+            this.autoSlide = setInterval(() => this.nextSlide(), 5000);
+        });
+        
+        this.updateButtons();
+    }
+    
+    goToSlide(slideIndex) {
+        this.currentSlide = slideIndex;
+        const translateX = -slideIndex * 100;
+        this.track.style.transform = `translateX(${translateX}%)`;
+        this.updateIndicators();
+        this.updateButtons();
+    }
+    
+    nextSlide() {
+        if (this.currentSlide < this.totalSlides - 1) {
+            this.currentSlide++;
+        } else {
+            this.currentSlide = 0; // Loop back to first slide
+        }
+        this.goToSlide(this.currentSlide);
+    }
+    
+    prevSlide() {
+        if (this.currentSlide > 0) {
+            this.currentSlide--;
+        } else {
+            this.currentSlide = this.totalSlides - 1; // Loop to last slide
+        }
+        this.goToSlide(this.currentSlide);
+    }
+    
+    updateIndicators() {
+        this.indicators.forEach((indicator, index) => {
+            indicator.classList.toggle('active', index === this.currentSlide);
+        });
+    }
+    
+    updateButtons() {
+        // Enable/disable buttons based on current slide
+        this.prevBtn.disabled = false;
+        this.nextBtn.disabled = false;
+    }
+}
+
 // Initialize everything when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Portfolio website loaded successfully!');
     
-    // Add any initialization code here
+    // Initialize portfolio carousel
+    new PortfolioCarousel();
     
     // Preload critical images (if any were added later)
     const preloadImages = () => {
