@@ -1,0 +1,212 @@
+
+Jashanpreet Singh Sawhney
+Home
+About
+Portfolio
+Contact
+Events
+C++ Developer Enthusiast
+Passionate about ML/AI and learning about new aspects of the fields in which I can use them to able to create sustainable solutions to any problem. Also well versed in DSA and their different approaches.
+
+Visit GitHub Profile
+Download Resume
+Location
+Jagadhri, Haryana, India
+
+Age
+22 Years
+
+Specialization
+C++ Developer Enthusiast
+
+Available
+Open to opportunities
+
+Technical Skills
+C++
+C++
+Programming Language
+C
+C
+Programming Language
+HTML
+HTML
+Frontend
+CSS
+CSS
+Frontend
+JavaScript
+JavaScript
+Programming Language
+React
+React
+Frontend
+Tailwind CSS
+Tailwind CSS
+Frontend
+MongoDB
+MongoDB
+Database
+Express.js
+Express.js
+Backend
+Python
+Python
+Programming Language
+Education
+B.Tech. Computer Science and Engineering
+Guru Nanak Dev University (GNDU), Amritsar, Punjab
+
+07/2022 – Present
+
+SGPA (5th Sem): 8.33
+
+Current
+Higher Secondary Education (Class XII)
+S.D. Public School, Jagadhri, Haryana
+
+04/2021 – 05/2022
+
+94.2% (96.4% in PCM)
+
+Completed
+Secondary Education (Class X)
+S.D. Public School, Jagadhri, Haryana
+
+04/2020 – 05/2021
+
+91.3%
+
+Certificate of Merit in Maths for scoring 100/100 marks from CBSE
+
+Completed
+About Me
+I love to learn whenever and wherever I find a chance to and the world of technology combined with innovation paves an entire new path for me to explore which makes me more eager to learn and build computational solutions that benefit everyone.
+
+Personal Information
+Full Name:
+Jashanpreet Singh Sawhney
+Age:
+22 Years
+Nationality:
+Indian
+Email:
+jashannoor13@gmail.com
+Phone:
++919996249013
+Languages:
+Punjabi, Hindi, English
+Address:
+1730, near Police Chownky, Rajaan Gali, Jagadhri, Haryana, 135001
+Certifications
+C Programming for Beginners – Master the C Language
+Tim Buchalka's Learning Training Academy, Jason Fedin
+
+A.I. WorkPlace Proficiency Certification
+Superhuman AI Academy (Zain Kahn)
+
+Hobbies & Interests
+Music: Listening and Singing
+
+Literature: Learning about Spirituality and Human Nature
+
+Cinematic and Comic Book Critique: Passionate about fiction movies and tracing their comic origins
+
+Exploring the origins of truth in science and education
+
+Modern developer workspace
+My Journey
+Started my journey in web development with a passion for creating user-centric applications. Over the years, I've worked on various projects ranging from e-commerce platforms to enterprise solutions, always focusing on clean code and exceptional user experiences.
+
+Portfolio
+Showcasing my latest projects and creative endeavors
+
+Weather Forecast App
+Weather Forecast App
+Real-time weather forecasting tool that fetches and displays weather data using an API. Integrated cURL for API requests and parsed JSON data to provide weather updates in CLI.
+
+C++
+cURL
+JSON
+GitHub
+Password Manager
+Password Manager
+Secure password manager with encryption for storing and managing credentials. Used MongoDB for database and Express.js for backend API development.
+
+React
+Tailwind CSS
+MongoDB
+Express.js
+GitHub
+Web Music Player
+Web Music Player
+Responsive music streaming web app that shows Spotify's UI and functionality. Implemented audio playback, playlist management, and interactivity.
+
+HTML
+CSS
+JavaScript
+GitHub
+Developer's Journal
+Developer's Journal
+Productivity-oriented web app to store code snippets, analyze project performance using visual charts, and assist in debugging with intelligent insights.
+
+React
+TypeScript
+MongoDB
+Chart.js
+GitHub
+Netflix Clone
+Netflix Clone
+Fully responsive clone of the Netflix web app, pixel-perfect on both desktop and mobile, matching the layout, grid, and UI behavior of the original platform.
+
+HTML
+CSS
+JavaScript
+GitHub
+Student Performance Predictor
+Student Performance Predictor
+Academic analytics web app that stores student performance data and generates intelligent reports including personalized focus areas with custom report generation.
+
+React
+Node.js
+Express
+MongoDB
+GitHub
+Get In Touch
+Let's collaborate on your next project or discuss opportunities
+
+Contact Information
+Email
+
+jashannoor13@gmail.com
+
+Phone
+
++919996249013
+
+Location
+
+Jagadhri, Haryana, India
+
+Send Message
+First Name
+John
+Last Name
+Doe
+Email
+john@example.com
+Subject
+Project Discussion
+Message
+Tell me about your project...
+Send Message
+Events & Achievements
+Professional milestones, conferences, and community contributions
+
+Events Coming Soon
+This section will be updated with upcoming events, achievements, and milestones. Stay tuned for exciting announcements!
+
+Jashanpreet Singh Sawhney
+C++ Developer Enthusiast | Passionate about ML/AI
+
+© 2024 Jashanpreet Singh Sawhney. All rights reserved.
