@@ -426,86 +426,41 @@ function safeQuerySelector(selector) {
     return element;
 }
 
-// Portfolio Carousel
-class PortfolioCarousel {
-    constructor() {
-        this.track = document.getElementById('carouselTrack');
-        this.prevBtn = document.getElementById('prevBtn');
-        this.nextBtn = document.getElementById('nextBtn');
-        this.indicators = document.querySelectorAll('.indicator');
-        this.currentSlide = 0;
-        this.totalSlides = document.querySelectorAll('.project-card').length;
-        
-        this.init();
-    }
+// Enhanced Project Cards Animation
+function initializeProjectCards() {
+    const projectCards = document.querySelectorAll('.project-card');
     
-    init() {
-        if (!this.track) return;
+    // Add hover effects and animations
+    projectCards.forEach((card, index) => {
+        // Staggered animation on load
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
         
-        this.prevBtn.addEventListener('click', () => this.prevSlide());
-        this.nextBtn.addEventListener('click', () => this.nextSlide());
+        setTimeout(() => {
+            card.style.transition = 'all 0.6s ease';
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+        }, index * 150);
         
-        this.indicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => this.goToSlide(index));
+        // Enhanced hover effects
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-10px) scale(1.02)';
+            card.style.boxShadow = '0 20px 50px rgba(0, 0, 0, 0.4)';
         });
         
-        // Auto-slide every 5 seconds
-        this.autoSlide = setInterval(() => this.nextSlide(), 5000);
-        
-        // Pause auto-slide on hover
-        this.track.addEventListener('mouseenter', () => clearInterval(this.autoSlide));
-        this.track.addEventListener('mouseleave', () => {
-            this.autoSlide = setInterval(() => this.nextSlide(), 5000);
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0) scale(1)';
+            card.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.3)';
         });
-        
-        this.updateButtons();
-    }
-    
-    goToSlide(slideIndex) {
-        this.currentSlide = slideIndex;
-        const translateX = -slideIndex * 100;
-        this.track.style.transform = `translateX(${translateX}%)`;
-        this.updateIndicators();
-        this.updateButtons();
-    }
-    
-    nextSlide() {
-        if (this.currentSlide < this.totalSlides - 1) {
-            this.currentSlide++;
-        } else {
-            this.currentSlide = 0; // Loop back to first slide
-        }
-        this.goToSlide(this.currentSlide);
-    }
-    
-    prevSlide() {
-        if (this.currentSlide > 0) {
-            this.currentSlide--;
-        } else {
-            this.currentSlide = this.totalSlides - 1; // Loop to last slide
-        }
-        this.goToSlide(this.currentSlide);
-    }
-    
-    updateIndicators() {
-        this.indicators.forEach((indicator, index) => {
-            indicator.classList.toggle('active', index === this.currentSlide);
-        });
-    }
-    
-    updateButtons() {
-        // Enable/disable buttons based on current slide
-        this.prevBtn.disabled = false;
-        this.nextBtn.disabled = false;
-    }
+    });
 }
 
 // Initialize everything when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Portfolio website loaded successfully!');
     
-    // Initialize portfolio carousel
-    new PortfolioCarousel();
+    // Initialize enhanced project cards
+    initializeProjectCards();
     
     // Preload critical images (if any were added later)
     const preloadImages = () => {
