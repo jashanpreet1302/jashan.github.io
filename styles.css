@@ -12,8 +12,8 @@ html {
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #fff;
+    color: #cbd5e1;
+    background-color: #0f172a;
 }
 
 /* Container */
@@ -300,40 +300,41 @@ section {
 .section-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #1e293b;
+    color: white;
     margin-bottom: 1rem;
 }
 
 .section-subtitle {
     font-size: 1.1rem;
-    color: #64748b;
+    color: #cbd5e1;
     max-width: 600px;
     margin: 0 auto;
 }
 
 /* About Section */
 .about {
-    background: #f8fafc;
-    padding-top: 0;
+    background: #0f172a;
+    color: white;
+    padding: 80px 0;
 }
 
 .about-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    grid-template-columns: 1fr;
+    gap: 3rem;
     margin-bottom: 4rem;
 }
 
 .about-description {
     font-size: 1.1rem;
-    color: #475569;
+    color: #cbd5e1;
     line-height: 1.8;
     margin-bottom: 2rem;
 }
 
 .personal-info h3 {
     font-size: 1.5rem;
-    color: #1e293b;
+    color: white;
     margin-bottom: 1.5rem;
     font-weight: 600;
 }
@@ -347,16 +348,16 @@ section {
     display: flex;
     justify-content: space-between;
     padding: 0.75rem 0;
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1px solid #334155;
 }
 
 .info-item strong {
-    color: #1e293b;
+    color: white;
     font-weight: 600;
 }
 
 .info-item span {
-    color: #64748b;
+    color: #cbd5e1;
 }
 
 .skills-section h3,
@@ -364,7 +365,7 @@ section {
 .certifications-section h3,
 .hobbies-section h3 {
     font-size: 1.5rem;
-    color: #1e293b;
+    color: white;
     margin-bottom: 2rem;
     font-weight: 600;
 }
@@ -424,27 +425,28 @@ section {
     grid-template-columns: 200px 1fr;
     gap: 2rem;
     padding: 2rem;
-    background: white;
+    background: #1e293b;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    border-left: 4px solid #2563eb;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-left: 4px solid #60a5fa;
+    border: 1px solid #334155;
 }
 
 .education-date {
     font-weight: 600;
-    color: #2563eb;
+    color: #60a5fa;
     font-size: 0.9rem;
 }
 
 .education-content h4 {
     font-size: 1.3rem;
-    color: #1e293b;
+    color: white;
     margin-bottom: 0.5rem;
     font-weight: 600;
 }
 
 .education-content p {
-    color: #64748b;
+    color: #cbd5e1;
     margin-bottom: 0.5rem;
 }
 
@@ -461,33 +463,33 @@ section {
 }
 
 .cert-card {
-    background: white;
+    background: #1e293b;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border: 1px solid #334155;
     transition: all 0.3s ease;
 }
 
 .cert-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .cert-card i {
     font-size: 2rem;
-    color: #2563eb;
+    color: #60a5fa;
     margin-bottom: 1rem;
 }
 
 .cert-card h4 {
-    color: #1e293b;
+    color: white;
     margin-bottom: 0.5rem;
     font-weight: 600;
 }
 
 .cert-card p {
-    color: #64748b;
+    color: #cbd5e1;
     font-size: 0.9rem;
 }
 
@@ -498,11 +500,11 @@ section {
 }
 
 .hobby-card {
-    background: white;
+    background: #1e293b;
     padding: 1.5rem;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border: 1px solid #334155;
     display: flex;
     align-items: flex-start;
     gap: 1rem;
@@ -511,21 +513,26 @@ section {
 
 .hobby-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .hobby-card i {
     font-size: 1.5rem;
-    color: #2563eb;
+    color: #60a5fa;
     margin-top: 0.25rem;
 }
 
 .hobby-card p {
-    color: #475569;
+    color: #cbd5e1;
     line-height: 1.6;
 }
 
 /* Portfolio Section */
+.portfolio {
+    background: #0f172a;
+    color: white;
+}
+
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -533,17 +540,17 @@ section {
 }
 
 .project-card {
-    background: white;
+    background: #1e293b;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid #334155;
     transition: all 0.3s ease;
 }
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
 }
 
 .project-image {
@@ -567,13 +574,13 @@ section {
 
 .project-content h3 {
     font-size: 1.4rem;
-    color: #1e293b;
+    color: white;
     margin-bottom: 1rem;
     font-weight: 600;
 }
 
 .project-content p {
-    color: #64748b;
+    color: #cbd5e1;
     line-height: 1.7;
     margin-bottom: 1.5rem;
 }
@@ -611,7 +618,8 @@ section {
 
 /* Contact Section */
 .contact {
-    background: #f8fafc;
+    background: #0f172a;
+    color: white;
 }
 
 .contact-content {
@@ -623,7 +631,7 @@ section {
 .contact-info h3,
 .contact-form-container h3 {
     font-size: 1.5rem;
-    color: #1e293b;
+    color: white;
     margin-bottom: 2rem;
     font-weight: 600;
 }
@@ -634,33 +642,35 @@ section {
     gap: 1rem;
     margin-bottom: 2rem;
     padding: 1.5rem;
-    background: white;
+    background: #1e293b;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border: 1px solid #334155;
 }
 
 .contact-item i {
     font-size: 1.5rem;
-    color: #2563eb;
+    color: #60a5fa;
     margin-top: 0.25rem;
 }
 
 .contact-item h4 {
-    color: #1e293b;
+    color: white;
     margin-bottom: 0.5rem;
     font-weight: 600;
 }
 
 .contact-item p {
-    color: #64748b;
+    color: #cbd5e1;
     line-height: 1.6;
 }
 
 .contact-form {
-    background: white;
+    background: #1e293b;
     padding: 2rem;
     border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid #334155;
 }
 
 .form-row {
@@ -676,7 +686,7 @@ section {
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
-    color: #1e293b;
+    color: white;
     font-weight: 500;
 }
 
@@ -684,18 +694,20 @@ section {
 .form-group textarea {
     width: 100%;
     padding: 12px 16px;
-    border: 2px solid #e2e8f0;
+    border: 2px solid #334155;
     border-radius: 8px;
     font-size: 1rem;
     transition: all 0.3s ease;
     font-family: inherit;
+    background: #0f172a;
+    color: white;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #2563eb;
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
 }
 
 .form-group textarea {
@@ -706,19 +718,20 @@ section {
 .contact-note {
     margin-top: 1rem;
     padding: 1rem;
-    background: #f8fafc;
+    background: #0f172a;
     border-radius: 8px;
-    border-left: 4px solid #2563eb;
+    border-left: 4px solid #60a5fa;
+    border: 1px solid #334155;
 }
 
 .contact-note p {
     margin: 0;
-    color: #64748b;
+    color: #cbd5e1;
     font-size: 0.9rem;
 }
 
 .contact-note a {
-    color: #2563eb;
+    color: #60a5fa;
     text-decoration: none;
 }
 
@@ -727,6 +740,11 @@ section {
 }
 
 /* Events Section */
+.events {
+    background: #0f172a;
+    color: white;
+}
+
 .events-content {
     text-align: center;
     padding: 4rem 0;
@@ -739,19 +757,19 @@ section {
 
 .events-placeholder i {
     font-size: 4rem;
-    color: #2563eb;
+    color: #60a5fa;
     margin-bottom: 2rem;
 }
 
 .events-placeholder h3 {
     font-size: 1.8rem;
-    color: #1e293b;
+    color: white;
     margin-bottom: 1rem;
     font-weight: 600;
 }
 
 .events-placeholder p {
-    color: #64748b;
+    color: #cbd5e1;
     line-height: 1.7;
     font-size: 1.1rem;
 }
@@ -862,6 +880,11 @@ section {
     .about-content {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+    
+    .education-item {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
     
     .contact-content {
