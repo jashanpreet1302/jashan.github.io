@@ -426,9 +426,10 @@ function safeQuerySelector(selector) {
     return element;
 }
 
-// Enhanced Project Cards Animation
+// Enhanced Project Cards Animation with Mobile Optimization
 function initializeProjectCards() {
     const projectCards = document.querySelectorAll('.project-card');
+    const isMobile = window.innerWidth <= 768;
     
     // Add hover effects and animations
     projectCards.forEach((card, index) => {
@@ -436,23 +437,75 @@ function initializeProjectCards() {
         card.style.opacity = '0';
         card.style.transform = 'translateY(30px)';
         
+        // Faster animations on mobile for better performance
+        const animationDelay = isMobile ? index * 100 : index * 150;
+        const transitionDuration = isMobile ? '0.4s' : '0.6s';
+        
         setTimeout(() => {
-            card.style.transition = 'all 0.6s ease';
+            card.style.transition = `all ${transitionDuration} ease`;
             card.style.opacity = '1';
             card.style.transform = 'translateY(0)';
-        }, index * 150);
+        }, animationDelay);
         
-        // Enhanced hover effects
-        card.addEventListener('mouseenter', () => {
-            card.style.transform = 'translateY(-10px) scale(1.02)';
-            card.style.boxShadow = '0 20px 50px rgba(0, 0, 0, 0.4)';
-        });
-        
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'translateY(0) scale(1)';
-            card.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.3)';
-        });
+        // Touch-friendly interactions for mobile
+        if (isMobile) {
+            // Use touch events for mobile
+            card.addEventListener('touchstart', () => {
+                card.style.transform = 'translateY(-5px) scale(1.01)';
+                card.style.boxShadow = '0 15px 40px rgba(0, 0, 0, 0.4)';
+            });
+            
+            card.addEventListener('touchend', () => {
+                setTimeout(() => {
+                    card.style.transform = 'translateY(0) scale(1)';
+                    card.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.3)';
+                }, 150);
+            });
+        } else {
+            // Desktop hover effects
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-10px) scale(1.02)';
+                card.style.boxShadow = '0 20px 50px rgba(0, 0, 0, 0.4)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0) scale(1)';
+                card.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.3)';
+            });
+        }
     });
+}
+
+// Mobile Performance Optimization
+function optimizeForMobile() {
+    if (window.innerWidth <= 768) {
+        // Reduce motion for mobile users who prefer it
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.body.style.scrollBehavior = 'auto';
+            
+            // Disable complex animations
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                card.style.transition = 'none';
+            });
+        }
+        
+        // Optimize scroll performance
+        let ticking = false;
+        
+        function updateScrollEffects() {
+            // Throttled scroll effects for mobile
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    // Add any scroll-based effects here
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }
+        
+        window.addEventListener('scroll', updateScrollEffects, { passive: true });
+    }
 }
 
 // Initialize everything when DOM is ready
@@ -461,6 +514,17 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initialize enhanced project cards
     initializeProjectCards();
+    
+    // Optimize for mobile devices
+    optimizeForMobile();
+    
+    // Handle orientation changes on mobile
+    window.addEventListener('orientationchange', () => {
+        setTimeout(() => {
+            // Recalculate layouts after orientation change
+            window.scrollTo(0, window.scrollY);
+        }, 100);
+    });
     
     // Preload critical images (if any were added later)
     const preloadImages = () => {
