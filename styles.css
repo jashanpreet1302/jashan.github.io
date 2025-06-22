@@ -238,7 +238,7 @@ body {
 
 /* Hero Info Section */
 .hero-info-section {
-    padding: 3rem 0;
+    padding: 3rem 0 6rem 0;
     background: linear-gradient(135deg, #334155 0%, #475569 100%);
 }
 
@@ -295,7 +295,7 @@ section {
 }
 
 section:not(.hero) {
-    scroll-margin-top: 120px;
+    scroll-margin-top: 150px;
 }
 
 /* Fix section spacing */
@@ -305,32 +305,32 @@ section:not(.hero) {
 
 .education {
     margin-top: 0;
-    padding-top: 120px;
+    padding-top: 150px;
 }
 
 .certifications {
     margin-top: 0;
-    padding-top: 120px;
+    padding-top: 150px;
 }
 
 .hobbies {
     margin-top: 0;
-    padding-top: 120px;
+    padding-top: 150px;
 }
 
 .portfolio {
     margin-top: 0;
-    padding-top: 120px;
+    padding-top: 150px;
 }
 
 .contact {
     margin-top: 0;
-    padding-top: 120px;
+    padding-top: 150px;
 }
 
 .events {
     margin-top: 0;
-    padding-top: 120px;
+    padding-top: 150px;
 }
 
 .section-header {
@@ -356,7 +356,7 @@ section:not(.hero) {
 .about {
     background: #0f172a;
     color: white;
-    padding: 80px 0;
+    padding: 120px 0;
 }
 
 .about-intro {
@@ -404,7 +404,7 @@ section:not(.hero) {
 .education {
     background: #1e293b;
     color: white;
-    padding: 120px 0 80px 0;
+    padding: 150px 0 80px 0;
     margin-top: 0;
 }
 
@@ -412,7 +412,7 @@ section:not(.hero) {
 .certifications {
     background: #0f172a;
     color: white;
-    padding: 120px 0 80px 0;
+    padding: 150px 0 80px 0;
     margin-top: 0;
 }
 
@@ -420,7 +420,7 @@ section:not(.hero) {
 .hobbies {
     background: #1e293b;
     color: white;
-    padding: 120px 0 80px 0;
+    padding: 150px 0 80px 0;
     margin-top: 0;
 }
 
@@ -581,7 +581,7 @@ section:not(.hero) {
 .portfolio {
     background: #0f172a;
     color: white;
-    padding: 120px 0 80px 0;
+    padding: 150px 0 80px 0;
     margin-top: 0;
 }
 
@@ -688,7 +688,7 @@ section:not(.hero) {
 .contact {
     background: #1e293b;
     color: white;
-    padding: 120px 0 80px 0;
+    padding: 150px 0 80px 0;
     margin-top: 0;
 }
 
@@ -813,7 +813,7 @@ section:not(.hero) {
 .events {
     background: #0f172a;
     color: white;
-    padding: 120px 0 80px 0;
+    padding: 150px 0 80px 0;
     margin-top: 0;
 }
 
